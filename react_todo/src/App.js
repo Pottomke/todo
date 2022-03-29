@@ -5,12 +5,16 @@ import Form from './components/Form';
 import ToDoList from "./components/ToDoList";
 
 
-function App() {
+function App(props) {
   //State stuff
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] =useState("all");
   const [filteredTodos, setFilteredTodos] =useState([]);
+  //const [edit, setEdit] =useState([]);
+  // const [note, setNote] =useState([]);
+  // const [date, setDate] =useState([]);
+  
 
   //Run once when the app starts
   useEffect(()=>{
@@ -19,9 +23,12 @@ function App() {
 
   //UseEffrect
   useEffect(()=>{
+    //inputRef.current.focus();
     filterHandler();
     saveLocalTodos();
   },[todos, status]);
+
+  //const inputRef = useRef(null)
 
   //Functions and events
   const filterHandler = () => {
@@ -55,7 +62,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>The Best Todo List</h1>
+        <h1>What do we have to do?</h1>
       </header>
       <Form 
         todos={todos} 
@@ -63,11 +70,19 @@ function App() {
         inputText={inputText} 
         setInputText={setInputText} 
         status={status} 
-        setStatus={setStatus} />
+        setStatus={setStatus}
+         />
       <ToDoList 
         todos={todos} 
         setTodos={setTodos}
-        filteredTodos={filteredTodos}/>
+        filteredTodos={filteredTodos}
+        // edit={edit}
+        // setEdit={setEdit}
+        // note={note}
+        // setNote={setNote}
+        // date={date}
+        // setDate={setDate}
+        />
     </div>
   );
 }

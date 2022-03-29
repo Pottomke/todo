@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background-image: linear-gradient(120deg, #d3dfad 0%, #85c068 100%);
     color: white;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -28,13 +28,13 @@
     background: white;
   }
   form button {
-    color: #ff6f47;
+    color: #23a595;
     background: #f7fffe;
     cursor: pointer;
     transition: all 0.3s ease;
   }
   form button:hover {
-    background: #ff6f47;
+    background: #23a595;
     color: white;
   }
   .todo-container {
@@ -64,25 +64,94 @@
   .todo li {
     flex: 1;
   }
+
+  .textInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+  }
+
   
+  .editMode{
+    display: none;
+  }
+
+  /* .noteMode{
+    display: none;
+  } */
+
+  .edit-todo{
+    margin:1rem;
+    /* border: 1px, #23a595; */
+    border: none;
+    background-color: #d3dfad;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .todo-text{
+    margin: 0.5rem;
+    margin-left: 1rem;
+    background: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+
+  .note{
+    margin: 0.5rem;
+    margin-left: 1rem;
+    background: #fde8de;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+
+  .date{
+    margin: 0.5rem;
+    margin-left: 1rem;
+    background: rgb(255, 255, 255);
+    font-size: 0.75rem;
+    color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+  }
+
   .trash-btn,
   .complete-btn,
   .note-btn {
-    background: #ff6f47;
+    background: #85c068;
     color: white;
     border: none;
     padding: 1rem;
     cursor: pointer;
     font-size: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
   .complete-btn {
-    background: rgb(11, 212, 162);
+    background: #23a595;
   }
   .note-btn {
-    background: rgb(11, 14, 212);
+    background: #d3dfad;
   }
   .todo-item {
-    padding: 0rem 0.5rem;
+    padding: 0rem 0,5rem;
+  }
+
+  .trash-btn:hover,
+  .complete-btn:hover,
+  .note-btn:hover {
+    background: #fde8de;
+    color: black;
   }
   
   .fa-trash,
@@ -119,7 +188,7 @@
     overflow: hidden;
   }
   select {
-    color: #ff6f47;
+    color: #23a595;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
     width: 12rem;
@@ -131,13 +200,14 @@
     top: 0;
     right: 0;
     padding: 1rem;
-    background: #ff6f47;
+    background: #23a595;
     cursor: pointer;
     pointer-events: none;
   }
   /* Transition */
-  /*
-  .select:hover::after {
+  
+  /* .select:hover::after {
     transform: scale(1.5);
-  }
-  */
+    
+  } */
+ 
